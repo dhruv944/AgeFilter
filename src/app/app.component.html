@@ -1,0 +1,8 @@
+<div class="container">
+    <div class="filter-container">
+        <app-filter-component filterLabel="Citizen Age" [filterOptions]="filterOptions" (filterChanged)="manageFilters($event)"></app-filter-component>
+    </div>
+    <div class="data-container">
+        <app-data-table [filterOptions]="filterOptions" [data]="ageData" [isFilterAvailable]="isFilterAvailable" (filterChanged)="manageFilters($event)"></app-data-table>
+    </div>
+</div>

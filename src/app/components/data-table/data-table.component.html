@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="applied-filters-container" *ngIf="isFilterAvailable">
+        <ng-container *ngFor="let option of filterOptions">
+            <div *ngIf="option.isSelected" class="filter-label-container"><span class="filter-label">{{option.description}}</span><span class="filter-clear" (click)="clearFilter(option)">x</span></div>
+        </ng-container>
+    </div>
+    <div class="data-container">
+        <table class="data-table">
+            <thead>
+                <th class="table-header">COLUMN NAME</th>
+                <th class="table-header">COLUMN NAME</th>
+                <th class="table-header">COLUMN NAME</th>
+                <th class="table-header">COLUMN NAME</th>
+                <th class="table-header">COLUMN NAME</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of data">
+                    <td class="table-cell">{{item.id}}</td>
+                    <td class="table-cell">
+                        <img class="person-image" src="assets/person.jpg" align="middle"/><span class="person-name">{{item.name}}</span></td>
+                    <td class="table-cell">{{item.description}}</td>
+                    <td class="table-cell">{{item.age}}</td>
+                    <td class="table-cell">
+                        <button class="edit-button">Edit</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>

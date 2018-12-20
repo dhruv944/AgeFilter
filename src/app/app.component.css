@@ -1,0 +1,17 @@
+.container {
+    padding: 25px;
+    background: #f1f1f1;
+}
+
+.filter-container {
+    margin-left: 15px;
+}
+
+.data-container {
+    margin-top: 15px;
+    border-radius: 3px;
+    background: white;
+    box-shadow: 0 0 10px #888888;
+    -webkit-box-shadow: 0 0 10px #888888;
+    -moz-box-shadow: 0 0 10px #888888;
+}

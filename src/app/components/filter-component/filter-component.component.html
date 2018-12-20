@@ -1,0 +1,11 @@
+<div>
+  <div class="filter-label">{{filterLabel}}</div>
+  <div class="filter-item-container">
+    <div class="filter-option-item" *ngFor="let option of filterOptions; let i = index; let first = first; let last = last" 
+    [ngClass]="{'filter-border-left': first, 'filter-border-right': last, 'filter-selected' : option.isSelected}"
+     (click)="onOptionClick(option)">
+      <div class="filter-label">{{option.label}}</div>
+      <div class="filter-description">{{option.description}}</div>
+    </div>
+  </div>
+</div>
